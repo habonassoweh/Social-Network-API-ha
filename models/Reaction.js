@@ -1,6 +1,5 @@
 //add Schema constructor and model function
 const { Schema, model } = require("mongoose");
-const Reaction = model("Reaction", ReactionSchema);
 
 const ReactionSchema = new Schema({
   reatcionId: {
@@ -22,5 +21,7 @@ const ReactionSchema = new Schema({
     //use a getter method to format the timestamp on query
   },
 });
+
+const Reaction = model("Reaction", ReactionSchema);
 
 module.exports = Reaction;
